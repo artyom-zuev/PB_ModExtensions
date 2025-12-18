@@ -1,0 +1,22 @@
+workshop:
+  publishedID: 3626035263
+  visibility: Unlisted
+  textFromMetadataVersion: true
+  textFromMetadataMain: true
+  title: 
+  description: 
+  internalData: 
+  changes: Updated code.
+  tags:
+  - Utilities
+  - Other
+  texPreviewUpload: true
+configEdits: 
+textEdits: 
+assetBundles: 
+libraryDLLs:
+  files:
+  - relative: false
+    enabled: true
+    path: D:/Work/UnityProjects/PB_ModSDK_Samples/PB2.Utils.ModExtensions/Solution/ModExtensions/obj/Release/ModExtensions.dll
+extraFiles: 

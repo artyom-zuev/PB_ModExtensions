@@ -16,7 +16,11 @@ gameVersionMin: 2.1
 gameVersionMax: 
 name: ModExtensions
 desc: >-
-  This is a library mod modifying game code to fix bugs and limitations. Will be updated in sync with official releases: if a bug or limitation covered by this mod ends up being addressed in a future Phantom Brigade release, this mod will be adjusted accordingly. Some of the fixes:
+  This is a library mod modifying game code to fix bugs and limitations. It will not introduce significant changes to your game when installed separately, but might be required as a dependency by other mods.
+
+
+
+  Will be updated in sync with official releases: if a bug or limitation covered by this mod ends up being addressed in a future Phantom Brigade release, this mod will be adjusted accordingly. Some of the fixes:
 
 
   - Patched overworld sidebar UI to prevent overflow with a high number of highlighted missions.
@@ -28,4 +32,4 @@ desc: >-
   - Fixed the internal spawn menu not selecting higher rarities.
 
 
-  Source code available on [url=https://github.com/artyom-zuev/PB_ModExtensions][u]GitHub[/u][/url]. Serves as a sample for patch mods and provides utilities simplifying patching and access to private fields and methods. Created using the [url=https://github.com/BraceYourselfGames/PB_ModSDK][u]Mod SDK[/u][/url]
+  Source code available on [url=https://github.com/artyom-zuev/PB_ModExtensions][u]GitHub[/u][/url]. Feel free to use this mod as a dependency or a reference the project setup and source code when developing your own library mods. Created using the [url=https://github.com/BraceYourselfGames/PB_ModSDK][u]Mod SDK[/u][/url]

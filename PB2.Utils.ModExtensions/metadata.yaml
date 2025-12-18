@@ -1,8 +1,8 @@
 priority: 1000
 colorHue: 0.5
 id: PB2.Utils.ModExtensions
-ver: 1.32
-url: https://github.com/BraceYourselfGames/PB_ModSDK
+ver: 1.34
+url: https://github.com/artyom-zuev/PB_ModExtensions
 includesConfigOverrides: true
 includesConfigEdits: false
 includesConfigTrees: false
@@ -16,16 +16,16 @@ gameVersionMin: 2.1
 gameVersionMax: 
 name: ModExtensions
 desc: >-
-  This is a library mod modifying game code to fix bugs and limitations. It will be updated
+  This is a library mod modifying game code to fix bugs and limitations. Will be updated in sync with official releases: if a bug or limitation covered by this mod ends up being addressed in a future Phantom Brigade release, this mod will be adjusted accordingly. Some of the fixes:
 
 
-  - Patched some overworld UI to improve mission display in custom campaigns.
+  - Patched overworld sidebar UI to prevent overflow with a high number of highlighted missions.
 
-  - Fixed modded given pilot names not appearing in random generation.
+  - Fixed given pilot names added by mods not appearing in random generation.
 
   - Fixed clamped part rating in unit generation preventing modding of higher rarities.
 
   - Fixed the internal spawn menu not selecting higher rarities.
 
 
-  Source code available, serves as a sample for patch mods and provides utilities simplifying patching and access to private fields and methods. Created using the [url=https://github.com/BraceYourselfGames/PB_ModSDK][u]Mod SDK[/u][/url]
+  Source code available on [url=https://github.com/artyom-zuev/PB_ModExtensions][u]GitHub[/u][/url]. Serves as a sample for patch mods and provides utilities simplifying patching and access to private fields and methods. Created using the [url=https://github.com/BraceYourselfGames/PB_ModSDK][u]Mod SDK[/u][/url]

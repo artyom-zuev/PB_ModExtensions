@@ -60,11 +60,12 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Functions\OverworldFunctions.cs" />
         <Compile Include="ModLink.cs" />
-        <Compile Include="PatchesMisc.cs" />
-        <Compile Include="PatchesText.cs" />
-        <Compile Include="PatchesUIOverworld.cs" />
-        <Compile Include="PatchesUnitGeneration.cs" />
+        <Compile Include="Patches\PatchesMisc.cs" />
+        <Compile Include="Patches\PatchesText.cs" />
+        <Compile Include="Patches\PatchesUIOverworld.cs" />
+        <Compile Include="Patches\PatchesUnitGeneration.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <Compile Include="Utilities.cs" />
     </ItemGroup>

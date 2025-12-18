@@ -1,7 +1,7 @@
 priority: 1000
 colorHue: 0.5
 id: PB2.Utils.ModExtensions
-ver: 1.31
+ver: 1.32
 url: https://github.com/BraceYourselfGames/PB_ModSDK
 includesConfigOverrides: true
 includesConfigEdits: false
@@ -19,11 +19,13 @@ desc: >-
   This is a library mod modifying game code to fix bugs and limitations. It will be updated
 
 
-  - Patches some overworld UI to improve mission display in custom campaigns.
+  - Patched some overworld UI to improve mission display in custom campaigns.
 
-  - Fixes modded given pilot names not appearing in random generation.
+  - Fixed modded given pilot names not appearing in random generation.
 
-  - Fixes clamped part rating in unit generation preventing modding of higher rarities.
+  - Fixed clamped part rating in unit generation preventing modding of higher rarities.
+
+  - Fixed the internal spawn menu not selecting higher rarities.
 
 
   Source code available, serves as a sample for patch mods and provides utilities simplifying patching and access to private fields and methods. Created using the [url=https://github.com/BraceYourselfGames/PB_ModSDK][u]Mod SDK[/u][/url]

@@ -16,7 +16,7 @@ textEdits:
 assetBundles: 
 libraryDLLs:
   files:
-  - relative: false
-    enabled: true
-    path: D:/Work/UnityProjects/PB_ModSDK_Samples/PB2.Utils.ModExtensions/Solution/ModExtensions/obj/Release/ModExtensions.dll
+  - enabled: true
+    relative: true
+    path: Solution/ModExtensions/obj/Release/ModExtensions.dll
 extraFiles: 

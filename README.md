@@ -6,8 +6,7 @@ ModExtensions is a library mod for Phantom Brigade that patches issues interferi
   - Fixes clamped part rating in unit generation preventing modding of higher rarities.
   - Fixes the internal spawn menu not selecting higher rarities.
 
-It can additionally be used as a reference for other patch mods and provides utilities simplifying patching and access to private fields and methods.
-Packaged using the [url=https://github.com/BraceYourselfGames/PB_ModSDK][u]Mod SDK[/u][/url].
+The mod can additionally be used as a reference for other patch mods and provides utilities simplifying access to private fields and methods.
 
 # File structure
-The mod is located under a subfolder to allow using the root folder of a local Git repository as a target for `Custom project folders` in the Mod SDK.
+Intended to be used with the [Mod SDK](https://github.com/BraceYourselfGames/PB_ModSDK). The mod is located under a subfolder to allow using the root folder of a local Git repository as a target for `Custom project folders` in the Mod SDK.

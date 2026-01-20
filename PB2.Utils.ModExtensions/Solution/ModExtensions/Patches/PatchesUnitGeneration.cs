@@ -67,7 +67,7 @@ namespace ModExtensions
     [HarmonyPatch (typeof (UnitUtilities), nameof (UnitUtilities.CreatePersistentUnitDescription))]
     public class PatchesUnitGeneration_DescriptionRating
     {
-        static IEnumerable<CodeInstruction> Transpiler (IEnumerable<CodeInstruction> instructions)
+        private static IEnumerable<CodeInstruction> Transpiler (IEnumerable<CodeInstruction> instructions)
         {
             var codeMatcher = new CodeMatcher (instructions);
             codeMatcher.MatchStartForward

@@ -12,7 +12,7 @@ namespace ModExtensions
         private static Dictionary<Type, Dictionary<string, MethodInfo>> methodsPrivatePerType = new Dictionary<Type, Dictionary<string, MethodInfo>> ();
         private static StringBuilder sb = new StringBuilder ();
 
-        public static FieldInfo GetPrivateFieldInfo (object instance, string fieldName, bool isStatic, bool throwOnError = false)
+        public static FieldInfo GetPrivateFieldInfo (object instance, string fieldName, bool isStatic, bool throwOnError = true)
         {
             if (instance == null)
                 return null;
@@ -21,7 +21,7 @@ namespace ModExtensions
             return GetPrivateFieldInfo (instanceType, fieldName, isStatic, throwOnError);
         }
         
-        public static FieldInfo GetPrivateFieldInfo (Type type, string fieldName, bool isStatic, bool throwOnError = false)
+        public static FieldInfo GetPrivateFieldInfo (Type type, string fieldName, bool isStatic, bool throwOnError = true)
         {
             if (type == null)
                 return null;
@@ -74,7 +74,7 @@ namespace ModExtensions
         
         
         
-        public static MethodInfo GetPrivateMethodInfo (object instance, string methodName, bool isStatic, bool throwOnError = false)
+        public static MethodInfo GetPrivateMethodInfo (object instance, string methodName, bool isStatic, bool throwOnError = true)
         {
             if (instance == null)
                 return null;
@@ -83,7 +83,7 @@ namespace ModExtensions
             return GetPrivateMethodInfo (instanceType, methodName, isStatic, throwOnError);
         }
         
-        public static MethodInfo GetPrivateMethodInfo (Type type, string methodName, bool isStatic, bool throwOnError = false)
+        public static MethodInfo GetPrivateMethodInfo (Type type, string methodName, bool isStatic, bool throwOnError = true)
         {
             if (type == null)
                 return null;

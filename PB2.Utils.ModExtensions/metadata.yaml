@@ -1,9 +1,9 @@
 priority: 1000
 colorHue: 0.5
 id: PB2.Utils.ModExtensions
-ver: 1.34
+ver: 1.49
 url: https://github.com/artyom-zuev/PB_ModExtensions
-includesConfigOverrides: true
+includesConfigOverrides: false
 includesConfigEdits: false
 includesConfigTrees: false
 includesLibraries: true
@@ -19,7 +19,6 @@ desc: >-
   This is a library mod modifying game code to fix bugs and limitations. It will not introduce significant changes to your game when installed separately, but might be required as a dependency by other mods.
 
 
-
   Will be updated in sync with official releases: if a bug or limitation covered by this mod ends up being addressed in a future Phantom Brigade release, this mod will be adjusted accordingly. Some of the fixes:
 
 
@@ -30,6 +29,16 @@ desc: >-
   - Fixed clamped part rating in unit generation preventing modding of higher rarities.
 
   - Fixed the internal spawn menu not selecting higher rarities.
+
+  - Added support for sideloading pooled VFX, props and area background assets.
+
+  - Adjusted sideloading of item visuals, removing asset bundle names from registered keys ('bundle/prefab_name' turns to 'prefab_name') to fix pooling issues, allow replacing built in visuals and improve compatibility with SDK utilities. The original key format (`bundle/prefab_name`) will remain recognized by the game.
+
+  - Fixed inventory previews failing to return sideloaded item visuals back to pools.
+
+  - Fixed mechs and inventory previews using wrong indexes for attachments.
+
+  - Fixed mechs and inventory previews failing to hide base body models for attachments.
 
 
   Source code available on [url=https://github.com/artyom-zuev/PB_ModExtensions][u]GitHub[/u][/url]. Feel free to use this mod as a dependency or a reference the project setup and source code when developing your own library mods. Created using the [url=https://github.com/BraceYourselfGames/PB_ModSDK][u]Mod SDK[/u][/url]

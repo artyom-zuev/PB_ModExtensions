@@ -6,7 +6,7 @@ workshop:
   title: 
   description: 
   internalData: 
-  changes: Misc changes.
+  changes: '- Removed ConfigOverrides folder'
   tags:
   - Utilities
   - Other

@@ -18,7 +18,7 @@ namespace ModExtensions
         private static List<OverworldEntity> missionEntityBuffer = new List<OverworldEntity> ();
         private static StringBuilder sb = new StringBuilder ();
 
-        [HarmonyPatch (typeof (CIViewOverworldProcess), "RedrawMissions")]
+        [HarmonyPatch (typeof (CIViewOverworldProcess), nameof(CIViewOverworldProcess.RedrawMissions))]
         [HarmonyPrefix]
         public static bool RedrawMissions (CIViewOverworldProcess __instance)
         {
@@ -30,26 +30,26 @@ namespace ModExtensions
             try
             {
                 // First, use ModUtilities to fetch dependencies
-                var missionInstancesField = ModUtilities.GetPrivateFieldInfo (view, "missionInstances", false, true);
+                var missionInstancesField = ModUtilities.GetPrivateFieldInfo (view, "missionInstances", false);
                 var missionInstances = missionInstancesField.GetFieldInfoValue<Dictionary<int, CIHelperOverworldSidebarMission>> (view);
 
-                var missionPoolField = ModUtilities.GetPrivateFieldInfo (view, "missionPool", false, true);
+                var missionPoolField = ModUtilities.GetPrivateFieldInfo (view, "missionPool", false);
                 var missionPool = missionPoolField.GetFieldInfoValue<List<CIHelperOverworldSidebarMission>> (view);
 
-                var questKeyLastField = ModUtilities.GetPrivateFieldInfo (view, "questKeyLast", false, true);
+                var questKeyLastField = ModUtilities.GetPrivateFieldInfo (view, "questKeyLast", false);
                 var questKeyLast = questKeyLastField.GetFieldInfoValue<string> (view);
 
-                var baseSpeedMethod = ModUtilities.GetPrivateMethodInfo (view, "GetBaseSpeed", false, true);
+                var baseSpeedMethod = ModUtilities.GetPrivateMethodInfo (view, "GetBaseSpeed", false);
                 var speedBase = baseSpeedMethod.GetMethodInfoOutput<float> (view, null);
 
-                var layoutRedrawRequestedField = ModUtilities.GetPrivateFieldInfo (view, "layoutRedrawRequested", false, true);
+                var layoutRedrawRequestedField = ModUtilities.GetPrivateFieldInfo (view, "layoutRedrawRequested", false);
 
-                var onMissionClickMethod = ModUtilities.GetPrivateMethodInfo (view, "OnMissionClick", false, true);
-                var onMissionClickSecondaryMethod = ModUtilities.GetPrivateMethodInfo (view, "OnMissionClickSecondary", false, true);
-                var onMissionHoverStartMethod = ModUtilities.GetPrivateMethodInfo (view, "OnMissionHoverStart", false, true);
-                var onMissionHoverEndMethod = ModUtilities.GetPrivateMethodInfo (view, "OnMissionHoverEnd", false, true);
-                var redrawMissionMethod = ModUtilities.GetPrivateMethodInfo (view, "RedrawMission", false, true);
-                var refreshColliderListMethod = ModUtilities.GetPrivateMethodInfo (view, "RefreshColliderList", false, true);
+                var onMissionClickMethod = ModUtilities.GetPrivateMethodInfo (view, "OnMissionClick", false);
+                var onMissionClickSecondaryMethod = ModUtilities.GetPrivateMethodInfo (view, "OnMissionClickSecondary", false);
+                var onMissionHoverStartMethod = ModUtilities.GetPrivateMethodInfo (view, "OnMissionHoverStart", false);
+                var onMissionHoverEndMethod = ModUtilities.GetPrivateMethodInfo (view, "OnMissionHoverEnd", false);
+                var redrawMissionMethod = ModUtilities.GetPrivateMethodInfo (view, "RedrawMission", false);
+                var refreshColliderListMethod = ModUtilities.GetPrivateMethodInfo (view, "RefreshColliderList", false);
 
                 var overworld = Contexts.sharedInstance.overworld;
                 if (missionEntityGroup == null)
@@ -140,7 +140,7 @@ namespace ModExtensions
                     }
                 }
 
-                if (entitiesFinal != null && entitiesFinal.Count > 0)
+                if (entitiesFinal != null && entitiesFinal.Count > 0 && drawLimit > 0)
                 {
                     foreach (var entityOverworld in entitiesFinal)
                     {
@@ -217,7 +217,8 @@ namespace ModExtensions
                 if (missionsVisible)
                     view.missionWidget.height = entityIndex * view.missionSpacing;
 
-                Debug.Log ($"ModExtensions | RedrawMissions (Patched) | Created instances: {missionInstances.Count} | Limit: {drawLimit} | Any combat site: {drawFallbackAnyCombatDesc} | Draw only with display memory: {drawOnlyWithDisplayMemory} | Memory displayed: {memoryDisplayed.ToStringFormatted ()}");
+                if (missionsVisible)
+                    Debug.Log ($"ModExtensions | RedrawMissions (Patched) | Created instances: {missionInstances.Count} | Limit: {drawLimit} | Any combat site: {drawFallbackAnyCombatDesc} | Draw only with display memory: {drawOnlyWithDisplayMemory} | Memory displayed: {memoryDisplayed.ToStringFormatted ()}");
                 layoutRedrawRequestedField.SetValue (view, true);
             }
             catch (Exception e)

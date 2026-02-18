@@ -6,7 +6,7 @@ workshop:
   title: 
   description: 
   internalData: 
-  changes: '- Removed ConfigOverrides folder'
+  changes: '- Additional fixes to the mech visualization methods in inventory and in combat. Both AssetBundle-prefixed asset keys and prefab name asset keys should work correctly in all contexts.'
   tags:
   - Utilities
   - Other

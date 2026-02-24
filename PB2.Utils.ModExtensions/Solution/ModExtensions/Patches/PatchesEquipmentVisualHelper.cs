@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using HarmonyLib;
 using UnityEngine;
+using PhantomBrigade.Mods;
 
 namespace ModExtensions
 {
+    // Phantom Brigade 2.1.1 implements this fix
+    // Code here temporarily commented out before removal
+    /*
     [HarmonyPatch]
     public class PatchesEquipmentVisualHelper
     {
@@ -236,4 +240,6 @@ namespace ModExtensions
             }
         }
     }
+    
+    */
 }

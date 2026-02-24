@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace ModExtensions
 {
+    // Phantom Brigade 2.1.1 adds the same utilities to PhantomBrigade.Mods.ModUtilities
+    // Code here temporarily commented out before removal
+    /*
     public static class ModUtilities
     {
         private static Dictionary<Type, Dictionary<string, FieldInfo>> fieldsPrivatePerType = new Dictionary<Type, Dictionary<string, FieldInfo>> ();
@@ -168,4 +171,5 @@ namespace ModExtensions
             return instanceAction;
         }
     }
+    */
 }

@@ -10,6 +10,9 @@ using PhantomBrigade.Data;
 
 namespace ModExtensions
 {
+    // Phantom Brigade 2.1.1 implements this fix
+    // Code here temporarily commented out before removal
+    /*
     [HarmonyPatch]
     public class PatchesUnitVisualManager
     {
@@ -237,29 +240,6 @@ namespace ModExtensions
             bool baseHidden
         )
         {
-            /*
-            argsVisualizeElement[0] = visualKey;
-            argsVisualizeElement[1] = subsystemKey;
-            argsVisualizeElement[2] = socket;
-            argsVisualizeElement[3] = hardpointInfo;
-            argsVisualizeElement[4] = hardpointGroupLink;
-            argsVisualizeElement[5] = visualIndex;
-            argsVisualizeElement[6] = position;
-            argsVisualizeElement[7] = rotation;
-            argsVisualizeElement[8] = scale;
-            argsVisualizeElement[9] = visualsList;
-            argsVisualizeElement[10] = activationLinks;
-            argsVisualizeElement[11] = combined;
-            argsVisualizeElement[12] = centered;
-            argsVisualizeElement[13] = activated;
-            argsVisualizeElement[14] = baseHidden;
-            methodVisualizeElement.Invoke (view, argsVisualizeElement);
-            */
-            
-            // The above would be sufficient if the original VisualizeElement worked as needed,
-            // but unfortunately it needs replacement. Since it's not invoked anywhere else,
-            // we can just directly implement it here without a separate patch...
-            
             if (string.IsNullOrEmpty (visualName) || hardpointInfo == null || hardpointGroupLink == null || visualsList == null)
                 return;
             
@@ -380,4 +360,5 @@ namespace ModExtensions
             }
         }
     }
+    */
 }

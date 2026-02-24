@@ -8,6 +8,9 @@ using UnityEngine;
 
 namespace ModExtensions
 {
+    // Phantom Brigade 2.1.1 implements this fix
+    // Code here temporarily commented out before removal
+    /*
     [HarmonyPatch]
     public class PatchesModManager
     {
@@ -189,4 +192,5 @@ namespace ModExtensions
             }
         }
     }
+    */
 }

@@ -11,6 +11,9 @@ using PhantomBrigade.Overworld;
 
 namespace ModExtensions
 {
+    // Phantom Brigade 2.1.1 implements this fix
+    // Code here temporarily commented out before removal
+    /*
     [HarmonyPatch]
     public class PatchesUIOverworld
     {
@@ -232,4 +235,5 @@ namespace ModExtensions
             return false;
         }
     }
+    */
 }

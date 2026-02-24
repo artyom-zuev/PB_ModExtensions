@@ -21,7 +21,7 @@ namespace ModExtensions
 
             var modLink = ModLinkCustom.ins;
             var loadedData = ModManager.loadedModsLookup.TryGetValue (modLink.modID, out var v) ? v : null;
-            if (loadedData != null)
+            if (loadedData != null && loadedData.patchedMethodNames.Count > 0)
             {
                 int methodCount = loadedData?.patchedMethodNames != null ? loadedData.patchedMethodNames.Count : 0;
                 var text = $"\n\n[ff9999]Mod extensions active ♦\n[cc]{methodCount} methods patched";
@@ -29,7 +29,7 @@ namespace ModExtensions
             }
             else
             {
-                var text = "\n\n[ff9999]Mod extensions active ♦\n[cc]Load info not found[-]";
+                var text = "\n\n[ff9999]Mod extensions active ♦";
                 labelMods.text += text;
             }
         }

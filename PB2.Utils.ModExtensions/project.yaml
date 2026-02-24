@@ -6,7 +6,7 @@ workshop:
   title: 
   description: 
   internalData: 
-  changes: '- Additional fixes to the mech visualization methods in inventory and in combat. Both AssetBundle-prefixed asset keys and prefab name asset keys should work correctly in all contexts.'
+  changes: '- Disabled fixes to issues that are now officially patched in PB 2.1.1. I recommend keeping the mod installed as more issues might be discovered over time and ModExtensions might remain a dependency to mods currently using it.'
   tags:
   - Utilities
   - Other
